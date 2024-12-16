@@ -1,0 +1,207 @@
+/* Reset the default margin, padding, and box-sizing for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling for all pages */
+body {
+    font-family: 'Courier New', Courier, monospace; /* Use a monospaced font for a coding theme */
+    background-image: url(retro-cyberpunk-style-80s.jpg); /* Background image with a cyberpunk theme */
+    background-position: center; /* Position the background image at the center */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-size: cover; /* Ensure the background covers the entire screen */
+    position: relative;
+    color: #0ff1ce; /* Neon green text color */
+    text-align: center; /* Center-align the text */
+    height: 100vh; /* Full screen height */
+    margin: 0;
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    overflow: hidden; /* Hide overflow to prevent scrollbars */
+}
+
+/* Styling for h2 headings */
+h2 {
+    margin-bottom: 20px; /* Add space below h2 elements */
+}
+
+/* General container styling for all pages */
+.container {
+    max-width: 800px; /* Limit width to 800px */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background with slight transparency */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); /* Neon blue glow effect */
+    text-align: center; /* Center-align the content */
+}
+
+/* Styling for the welcome page */
+.welcome-container h1 {
+    font-size: 3rem; /* Larger font size for h1 */
+    position: relative;
+    color: #0ff1ce; /* Neon green text color */
+    text-transform: uppercase; /* Uppercase text for emphasis */
+    animation: glitch 1s infinite; /* Apply glitch animation to the title */
+}
+
+.welcome-container p {
+    font-size: 1.2rem; /* Slightly larger text for paragraph */
+    margin: 10px 0 20px; /* Space around the paragraph */
+}
+
+/* Glitch effect for the title */
+.glitch::before,
+.glitch::after {
+    content: attr(data-text); /* Duplicate the content for glitch effect */
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    color: #ff00ff; /* Pink color for glitch */
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0); /* Hide part of the content for glitch effect */
+    animation: glitch 1s infinite linear; /* Apply the glitch animation */
+}
+
+/* Glitch animation with offset for visual effect */
+.glitch::before {
+    left: 2px; /* Slight offset to the left */
+    text-shadow: -2px 0 #ff00ff; /* Add a pink shadow to the left */
+    animation-delay: -0.2s; /* Delay the glitch effect */
+}
+
+.glitch::after {
+    left: -2px; /* Slight offset to the right */
+    text-shadow: -2px 0 #00ffff; /* Add a cyan shadow to the right */
+    animation-delay: -0.5s; /* Delay the glitch effect */
+}
+
+/* Styling for the neon button */
+.neon-button {
+    padding: 15px 30px; /* Add padding inside the button */
+    margin-top: 20px; /* Space above the button */
+    font-size: 1.2rem; /* Medium font size */
+    color: #0ff1ce; /* Neon green text */
+    background: transparent; /* Transparent background */
+    border: 2px solid #0ff1ce; /* Neon green border */
+    border-radius: 5px; /* Rounded corners */
+    text-transform: uppercase; /* Uppercase text */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 0 10px #0ff1ce, 0 0 20px #00ffff, 0 0 30px #00ffff; /* Neon glow effect */
+}
+
+/* Hover effect for the neon button */
+.neon-button:hover {
+    color: #000; /* Change text color to black */
+    background: #0ff1ce; /* Change background to neon green */
+    box-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff; /* Increase the neon glow */
+}
+
+/* Styling for the form on the login page */
+form {
+    display: flex;
+    flex-direction: column; /* Arrange form elements vertically */
+    gap: 15px; /* Space between form elements */
+    margin-top: 20px; /* Space above the form */
+}
+
+/* Input field styles for the login page */
+form input {
+    padding: 10px; /* Padding inside the input fields */
+    font-size: 16px; /* Font size */
+    border: 2px solid #0ff1ce; /* Neon green border */
+    border-radius: 4px; /* Rounded corners */
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+    color: #0ff1ce; /* Neon green text */
+    box-shadow: 0 0 10px #0ff1ce; /* Neon glow effect */
+}
+
+/* Progress bar container for the home page */
+.progress-container {
+    margin: 20px 0; /* Space above and below the progress container */
+}
+
+/* Styling for the progress bar */
+.progress-bar {
+    width: 100%; /* Full width */
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent white background */
+    border: 2px solid #0ff1ce; /* Neon green border */
+    border-radius: 10px; /* Rounded corners */
+    height: 20px; /* Fixed height */
+    margin: 10px 0; /* Space above and below the progress bar */
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff; /* Neon glow effect */
+    overflow: hidden; /* Hide the overflow */
+}
+
+/* Fill for the progress bar */
+.progress-fill {
+    height: 100%; /* Full height */
+    background-color: #0ff1ce; /* Neon green fill */
+    box-shadow: 0 0 10px #0ff1ce, 0 0 20px #00ffff, 0 0 30px #00ffff; /* Neon glow effect */
+    transition: width 0.4s ease; /* Smooth transition for the width change */
+}
+
+/* Styling for text areas on lesson and challenge pages */
+textarea {
+    width: 100%; /* Full width */
+    height: 200px; /* Fixed height */
+    padding: 10px; /* Padding inside the textarea */
+    font-size: 16px; /* Font size */
+    border: 2px solid #0ff1ce; /* Neon green border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+    color: #0ff1ce; /* Neon green text */
+    box-shadow: 0 0 10px #0ff1ce; /* Neon glow effect */
+}
+
+/* Placeholder text color inside textareas */
+textarea::placeholder {
+    color: #555; /* Darker color for the placeholder */
+}
+
+/* Styling for feedback section */
+.feedback {
+    margin-top: 30px; /* Space above the feedback section */
+}
+
+/* Styling for list items inside lesson content */
+.lesson-content ul li {
+    list-style-position: inside; /* Position the list marker inside the list */
+}
+
+/* Fade-in animation for elements */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start with zero opacity */
+    }
+    to {
+        opacity: 1; /* End with full opacity */
+    }
+}
+
+/* Glitch effect keyframes for text animation */
+@keyframes glitch {
+    0% {
+        clip: rect(20px, 9999px, 85px, 0);
+    }
+    20% {
+        clip: rect(25px, 9999px, 90px, 0);
+    }
+    40% {
+        clip: rect(10px, 9999px, 70px, 0);
+    }
+    60% {
+        clip: rect(40px, 9999px, 100px, 0);
+    }
+    80% {
+        clip: rect(15px, 9999px, 75px, 0);
+    }
+    100% {
+        clip: rect(30px, 9999px, 95px, 0);
+    }
+}
