@@ -11,3 +11,5 @@ To make the experience exciting, I designed the website with a cyberpunk sci-fi 
 Glitch effects on main titles.
 Neon buttons to add a futuristic touch.
 A creative background that immerses users in a unique learning environment.
+
+Note! this is only HTML & CSS UI prototype, not including any Dynamic features.
